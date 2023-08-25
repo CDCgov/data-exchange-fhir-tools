@@ -1,6 +1,6 @@
 # jwks_url
 
-(Non production) Azure function that provides the __public__ part of the JWKS as required by SMART [Backend Services Authorization Guide](#references)
+(Non production) Azure function that provides the __public__ part of the JWKS as required by SMART [Backend Services Authorization Guide](https://hl7.org/fhir/uv/bulkdata/authorization/index.html)
 
 ## JWKS Algorithms
 Example of exposed endpoints running locally:
