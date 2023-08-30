@@ -181,7 +181,7 @@ app.get('/bearer/public-key', async (req, res) => {
   console.info('store value set with jwt1 one time authorization request token')
 
   const params = new URLSearchParams()
-  params.append('scope', 'patient/*.rs user/*.rs')
+  params.append('scope', 'system/*.rs')
   params.append('grant_type', 'client_credentials')
   params.append('client_assertion_type', 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer')
   params.append('client_assertion', jwt1)

@@ -44,7 +44,9 @@ async function createJwt(tokenUrl) {
     const [key] = keyStore.all({ use: 'sig' })
   
     const dateNow = Math.floor(Date.now() / 1000)
-    let expiryDate = Math.floor( new Date(new Date().setHours(new Date().getHours() + 1)) / 1000 )
+    // needs short lived token, 5 min to expiry 
+    const diff = 5 // min
+    const expiryDate = Math.floor( new Date(new Date().setMinutes(new Date().getMinutes() + diff)) / 1000 )
     
     const opt = { compact: true, jwk: key, fields: { 
         typ: 'jwt', 
@@ -53,7 +55,7 @@ async function createJwt(tokenUrl) {
     } // .opt
     const payload = JSON.stringify({
       exp: expiryDate,
-    //   iat: dateNow,
+      iat: dateNow,
       sub: clientId,
       iss: clientId,
       aud: tokenUrl,
