@@ -169,7 +169,7 @@ app.get('/bearer/public-key', async (req, res) => {
   if (wellKnownInfo instanceof Error) {
     return wellKnownInfo
   } // .if 
-  const tokenUrl = wellKnownInfo['tokenUrl']
+  const tokenUrl = new URL (wellKnownInfo['tokenUrl'])
 
   // create a jwt
   const jwt1 = await jwks.createJwt(tokenUrl) 
@@ -181,7 +181,7 @@ app.get('/bearer/public-key', async (req, res) => {
   console.info('store value set with jwt1 one time authorization request token')
 
   const params = new URLSearchParams()
-  params.append('scope', 'system/*.rs')
+  params.append('scope', 'system/*.read')
   params.append('grant_type', 'client_credentials')
   params.append('client_assertion_type', 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer')
   params.append('client_assertion', jwt1)
@@ -190,7 +190,7 @@ app.get('/bearer/public-key', async (req, res) => {
   }
 
   try {
-
+    console.log('sending access token request to ', tokenUrl.href)
     const authResp = await axios.post(tokenUrl, params, {
       // params: params,
       headers: headers
