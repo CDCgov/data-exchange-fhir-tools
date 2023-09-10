@@ -1,6 +1,7 @@
 const args = process.argv
 
 const dotenv = require('dotenv').config( { path: process.argv[2] })
+console.log('loading config from file', process.argv[2])
 const fs = require('fs')
 const store = require('./store')
 

@@ -6,6 +6,7 @@ const axios = require('axios')
 const wellKnown = require('./well-known')
 const jwks = require('./jwks')
 const store = require('./store')
+const c34 = require('./c34')
 
 const config = require('./config')
 
@@ -22,7 +23,7 @@ app.get('/', (req, res) => {
     serverTime: new Date().toISOString() // Add the current server time
   }
   res.json(packageInfo)
-})
+}) 
 
 
 app.get('/config', (req, res) => {
@@ -40,7 +41,7 @@ app.get('/config', (req, res) => {
   }, {})
 
   res.json(configObjReduced)
-})
+}) // .config
 
 
 app.get('/store', (req, res) => {
@@ -69,7 +70,7 @@ app.delete('/store', (req, res) => {
   } // .if
 
   res.json(result)
-})
+}) // .store
 
 
 // server endpoint to retrieve well-know from the set fhir server
@@ -81,7 +82,7 @@ app.get('/well-known-info', async (req, res) => {
   } // .if 
 
   res.json(result)
-})
+}) // .well-known-info
 
 
 // jwks_url returns jwks keys
@@ -93,7 +94,7 @@ app.get('/jwks_url', async (req, res) => {
   }
 
   res.json(jwksKeys)
-})
+}) // .jws_url
 
 
 // get jwt one time used for auth the client to the FHIR authorization server
@@ -113,7 +114,7 @@ app.get('/jwt1', async(req, res) => {
     const jwt1Json = {jwt1: jwt1}
     store.setValues(jwt1Json)
     res.json(jwt1Json) 
-})
+}) // .jwt1
 
 
 // get bearer token from fhir server
@@ -158,7 +159,7 @@ app.get('/bearer/shared-secret', async (req, res) => {
     res.status(500).send({errorMessage: err.message})
   } // try catch
 
-})
+}) // .bearer/shared-secret
 
 
 // get bearer token from fhir server
@@ -206,7 +207,7 @@ app.get('/bearer/public-key', async (req, res) => {
     console.error(err)
     res.status(500).send({errorMessage: err.message})
   } // .try catch
-})
+}) // ./bearer/public-key
 
 
 // get fhir searches
@@ -252,7 +253,62 @@ app.get('/fhir-search/*', async (req, res) => {
     console.error(err)
     res.status(500).send({errorMessage: err.message})
   } // .try catch
-})
+}) // .fhir-search/
+
+// server endpoint to retrieve metadata from the set fhir server
+app.get('/metadata', async (req, res) => {
+
+  try {
+    const fhirServerUrl = config.getValue(config.FHIR_SERVER_URL_KN)
+
+    const fhirMetadataUrl = `${fhirServerUrl}metadata`
+    console.log('sending get request to: ', fhirMetadataUrl)
+    const result = await axios.get(fhirMetadataUrl)
+    console.log('received response status:', result.status)
+
+    res.send(result.data)
+
+  } catch (err) {
+
+    console.error(err)
+    res.status(500).send({errorMessage: err.message})
+  } // .try catch
+}) // .metadata
+
+const textParser = bodyParser.text({ type: 'text/plain' })
+// server endpoint for connecthaton 34
+app.post('/c34', textParser, async (req, res) => {
+
+  const hl7 = req.body
+
+  const identifier = c34.hl7GetIdentifier(hl7)
+  if ( identifier instanceof Error ){
+    console.error(identifier)
+    res.status(500).send({errorMessage: identifier.message})
+    return
+  } // .if
+
+  const medicationRequest = await c34.getMedicationRequest(identifier)
+  if ( medicationRequest instanceof Error ) {
+    res.status(500).send({errorMessage: medicationRequest.message})
+    return 
+  } // .if 
+
+  const medicationAdministration = await c34.getMedicationAdministration(identifier)
+  if ( medicationAdministration instanceof Error ) {
+    res.status(500).send({errorMessage: medicationAdministration.message})
+    return 
+  } // .if 
+
+    const combined = {
+      "hl7": hl7,
+      ...medicationRequest,
+      ...medicationAdministration
+    } // .combined
+
+    res.send(combined)
+}) // .c34
+
 
 // Start the server
 const port = process.env.PORT || 3000
