@@ -1,0 +1,96 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/uds-plus/CodeSystem/udsplus-insurance-codes> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "udsplus-insurance-codes"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://hl7.org/fhir/us/uds-plus/CodeSystem/udsplus-insurance-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">medicaid-title-19<a name=\"udsplus-insurance-codes-medicaid-title-19\"> </a></td><td>Medicaid Title X1X</td><td>Patients with Medicaid (Title X1X) insurance.</td></tr><tr><td style=\"white-space:nowrap\">chip-medicaid<a name=\"udsplus-insurance-codes-chip-medicaid\"> </a></td><td>CHIP Medicaid</td><td>Patients with CHIP Medicaid insurance.</td></tr><tr><td style=\"white-space:nowrap\">dually-eligible<a name=\"udsplus-insurance-codes-dually-eligible\"> </a></td><td>Dually Eligible</td><td>Patients with both Medicare and Medicaid.</td></tr><tr><td style=\"white-space:nowrap\">other-non-chip-public-insurance<a name=\"udsplus-insurance-codes-other-non-chip-public-insurance\"> </a></td><td>Other Non CHIP Public Insurance</td><td>Patients who have other public insurance which is non CHIP.</td></tr><tr><td style=\"white-space:nowrap\">other-public-insurance-chip<a name=\"udsplus-insurance-codes-other-public-insurance-chip\"> </a></td><td>Other Public Insurance CHIP</td><td>Patients who have other public insurance which is CHIP </td></tr></table></div>"
+  ]; # 
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ];
+     fhir:Extension.valueCode [
+       fhir:value "informative";
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ];
+         fhir:Extension.valueCanonical [
+           fhir:value "http://hl7.org/fhir/us/uds-plus/ImplementationGuide/udsplus";
+           fhir:link <http://hl7.org/fhir/us/uds-plus/ImplementationGuide/udsplus>
+         ]
+       ]
+     ]
+  ]; # 
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/uds-plus/CodeSystem/udsplus-insurance-codes"]; # 
+  fhir:CodeSystem.version [ fhir:value "0.2.0"]; # 
+  fhir:CodeSystem.name [ fhir:value "UDSPlusInsuranceCodes"]; # 
+  fhir:CodeSystem.title [ fhir:value "UDS Plus Insurance Codes"]; # 
+  fhir:CodeSystem.status [ fhir:value "active"]; # 
+  fhir:CodeSystem.experimental [ fhir:value "true"^^xsd:boolean]; # 
+  fhir:CodeSystem.date [ fhir:value "2022-09-06"^^xsd:date]; # 
+  fhir:CodeSystem.publisher [ fhir:value "HRSA UDS PLS Project"]; # 
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/[something]" ]
+     ]
+  ]; # 
+  fhir:CodeSystem.description [ fhir:value "The UDS Plus CodeSystem is a 'starter set' of codes supported for identifying insurance types used by patients in UDS+ program."]; # 
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ]; # 
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean]; # 
+  fhir:CodeSystem.valueSet [
+     fhir:value "http://hl7.org/fhir/us/uds-plus/ValueSet/udsplus-insurance";
+     fhir:link <http://hl7.org/fhir/us/uds-plus/ValueSet/udsplus-insurance>
+  ]; # 
+  fhir:CodeSystem.content [ fhir:value "complete"]; # 
+  fhir:CodeSystem.count [ fhir:value "5"^^xsd:nonNegativeInteger]; # 
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "medicaid-title-19" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Medicaid Title X1X" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Patients with Medicaid (Title X1X) insurance." ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "chip-medicaid" ];
+     fhir:CodeSystem.concept.display [ fhir:value "CHIP Medicaid" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Patients with CHIP Medicaid insurance." ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "dually-eligible" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Dually Eligible" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Patients with both Medicare and Medicaid." ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "other-non-chip-public-insurance" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Other Non CHIP Public Insurance" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Patients who have other public insurance which is non CHIP." ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "other-public-insurance-chip" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Other Public Insurance CHIP" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Patients who have other public insurance which is CHIP " ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/uds-plus/CodeSystem/udsplus-insurance-codes.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/uds-plus/CodeSystem/udsplus-insurance-codes.ttl> .
+
+# -------------------------------------------------------------------------------------
+

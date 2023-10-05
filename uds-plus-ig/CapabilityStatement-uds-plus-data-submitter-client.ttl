@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/uds-plus/CapabilityStatement/uds-plus-data-submitter-client> a fhir:CapabilityStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "uds-plus-data-submitter-client"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <h2>Data Receiver</h2>\n      <p>(Requirements Definition Capability Statement)</p>\n      <p>Canonical URL: http://hl7.org/fhir/us/uds-plus/CapabilityStatement/uds-plus-data-submitter-client</p>\n      <p>Published by: <b>HL7 International - Public Health Work Group</b>\n      </p>\n      <p>This is a CapabilityStatement that defines the expected capabilities of the Data Submitter actor as a client.  \n      </p>\n      <h2>General</h2>\n      <div class=\"table-wrapper\">\n        <table>\n          <tbody>\n            <tr>\n              <th>FHIR Version:</th>\n              <td>4.0.1</td>\n            </tr>\n            <tr>\n              <th>Supported formats:</th>\n              <td>json</td>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n      <h2>REST  behavior</h2>\n      <p>The primary focus of the Data Submitter actor as a client is to invoke the Group/$export operation identified below and extract the UDS+ data using US Core and QI Core profiles.\n      In certain cases, the Data Submitter MAY have to invoke individual patient api's to extract the necessary UDS+ data when the Data Source does not support Group/$export operation.  \n      data.\n      </p>\n      <p>\n        <b>Security:</b>\n      </p>\n      <p>Implementations must meet the general security requirements documented in FHIR <a href=\"http://hl7.org/fhir/security.html\">Security guidance</a>.</p>\n      <p>In addition the Data Submitter actor as a client needs to meet the security requirements as outlined in the <a href=\"spec.html#smart-on-fhir-backend-services-authorization\">SMART on FHIR Backend Services Authorization</a></p>\n      \n      <h3>Resource summary</h3>\n      <div class=\"table-wrapper\">\n        <table class=\"grid\">\n          <thead>\n            <tr>\n              <th>Resource</th>\n              <th>Search</th>\n              <th>Read</th>\n              <th>Read Version</th>\n              <th>Instance History</th>\n              <th>Resource History</th>\n              <th>Create</th>\n              <th>Update</th>\n              <th>Delete</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <th>US Core data APIs and Data elements</th>\n              <td>\n                <a href=\"#USCore-search-type\" title=\"Search for specific US Core Resource instances.\">SHALL</a>\n              </td>\n              <td>\n                <a href=\"#USCore-read\" title=\"Retrieve specific US Core Resource instances.\">SHALL</a>\n              </td>\n              <td>\n              </td>\n              <td>               \n              </td>\n              <td>\n              </td>\n              <td>\n              </td>\n              <td>\n              </td>\n			  <td>\n              </td>\n            </tr>\n            <tr>\n              <th>QI Core data APIs and Data elements</th>\n              <td>\n                <a href=\"#QICore-search-type\" title=\"Search for specific QI Core Resource instances.\">SHALL</a>\n              </td>\n              <td>\n                <a href=\"#QICore-read\" title=\"Retrieve specific QI Core Resource instances.\">SHALL</a>\n              </td>\n              <td>\n              </td>\n              <td>               \n              </td>\n              <td>\n              </td>\n              <td>\n              </td>\n              <td>\n              </td>\n			  <td>\n              </td>\n            </tr>\n            \n          </tbody>\n        </table>\n      </div>\n     \n        <h3>FHIR Operations summary</h3>\n        <p>As a client, the Data Submitter has to be capable of invoking the below operation on the Data Source.</p>\n      \n      <ul>\n        <li>\n          <a href=\"http://hl7.org/fhir/uv/bulkdata/OperationDefinition-group-export.html\">Bulk Data Export ([BaseURL]/Group/[Id]/$export)</a>\n        </li>\n      </ul>\n      \n      <p>As a client, the Data Submitter has to be capable of invoking the below operation on the Data Receiver to submit the manifest file.</p>\n      \n      <ul>\n        <li>\n          <a href=\"http://hl7.org/fhir/us/uds-plus/OperationDefinition-import.html\">Bulk Data Import ([BaseURL]/$import)</a>\n        </li>\n      </ul>\n      \n      <br/>\n      <br/>\n      \n      <h3>\n        <a href=\"https://www.hl7.org/fhir/us/core/index.html\">US Core APIs and data elements</a>\n      </h3>\n      <p>Profiles: All US Core profiles\n      </p>\n      <h4>Interactions</h4>\n      <div class=\"table-wrapper\">\n        <table class=\"list\">\n          <thead>\n            <tr>\n              <th>Name</th>\n              <th>Description</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <th>\n                <a name=\"USCore-search-type\"> </a>\n                <span>search</span>\n              </th>\n              <td>\n                <p>Search for specific US Core resource profile instances.</p>\n              </td>\n            </tr>\n            <tr>\n              <th>\n                <a name=\"USCore-read\"> </a>\n                <span>read</span>\n              </th>\n              <td>\n                <p>Retrieve specific US Core resource profile instances</p>\n              </td>\n            </tr> \n          </tbody>\n        </table>\n      </div>\n      <br/>\n      <br/> \n      \n      <h3>\n        <a href=\"https://www.hl7.org/fhir/us/qicore/index.html\">QI Core data elements</a>\n      </h3>\n      <p>Profiles: All QI Core profiles\n      </p>\n      <h4>Interactions</h4>\n      <div class=\"table-wrapper\">\n        <table class=\"list\">\n          <thead>\n            <tr>\n              <th>Name</th>\n              <th>Description</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <th>\n                <a name=\"QICore-search-type\"> </a>\n                <span>search</span>\n              </th>\n              <td>\n                <p>Search for specific QI Core resource profile instances.</p>\n              </td>\n            </tr>\n            <tr>\n              <th>\n                <a name=\"QICore-read\"> </a>\n                <span>read</span>\n              </th>\n              <td>\n                <p>Retrieve QI Core resource profile instances</p>\n              </td>\n            </tr> \n          </tbody>\n        </table>\n      </div>    \n    </div>"
+  ]; # 
+  fhir:CapabilityStatement.url [ fhir:value "http://hl7.org/fhir/us/uds-plus/CapabilityStatement/uds-plus-data-submitter-client"]; # 
+  fhir:CapabilityStatement.version [ fhir:value "0.2.0"]; # 
+  fhir:CapabilityStatement.name [ fhir:value "UdsPlusDataSubmitter"]; # 
+  fhir:CapabilityStatement.title [ fhir:value "Uds Plus Data Submitter CapabilityStatement"]; # 
+  fhir:CapabilityStatement.status [ fhir:value "draft"]; # 
+  fhir:CapabilityStatement.date [ fhir:value "2020-12-06"^^xsd:date]; # 
+  fhir:CapabilityStatement.publisher [ fhir:value "HRSA UDS PLS Project"]; # 
+  fhir:CapabilityStatement.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/[something]" ]
+     ]
+  ]; # 
+  fhir:CapabilityStatement.description [ fhir:value "This is a CapabilityStatement that defines the expected capabilities of the Data Submitter actor."]; # 
+  fhir:CapabilityStatement.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ]; # 
+  fhir:CapabilityStatement.kind [ fhir:value "requirements"]; # 
+  fhir:CapabilityStatement.fhirVersion [ fhir:value "4.0.1"]; # 
+  fhir:CapabilityStatement.format [
+     fhir:value "json";
+     fhir:index 0
+  ]; # 
+  fhir:CapabilityStatement.rest [
+     fhir:index 0;
+     fhir:CapabilityStatement.rest.mode [ fhir:value "client" ];
+     fhir:CapabilityStatement.rest.documentation [ fhir:value "The primary focus of the Data Submitter is to invoke the Group/[id]/$export operation and gather the UDS+ data using US Core and QI Core profiles." ];
+     fhir:CapabilityStatement.rest.security [
+       fhir:CapabilityStatement.rest.security.description [ fhir:value "Implementations must meet the general security requirements documented in the security section of the implementation guide." ]
+     ];
+     fhir:CapabilityStatement.rest.operation [
+       fhir:index 0;
+       fhir:CapabilityStatement.rest.resource.operation.name [ fhir:value "export" ];
+       fhir:CapabilityStatement.rest.resource.operation.definition [
+         fhir:value "http://hl7.org/fhir/uv/bulkdata/OperationDefinition/group-export";
+         fhir:link <http://hl7.org/fhir/uv/bulkdata/OperationDefinition/group-export>
+       ]
+     ], [
+       fhir:index 1;
+       fhir:CapabilityStatement.rest.resource.operation.name [ fhir:value "import" ];
+       fhir:CapabilityStatement.rest.resource.operation.definition [
+         fhir:value "http://hl7.org/fhir/us/uds-plus/OperationDefinition/import";
+         fhir:link <http://hl7.org/fhir/us/uds-plus/OperationDefinition/import>
+       ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/uds-plus/CapabilityStatement/uds-plus-data-submitter-client.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/uds-plus/CapabilityStatement/uds-plus-data-submitter-client.ttl> .
+
+# -------------------------------------------------------------------------------------
+

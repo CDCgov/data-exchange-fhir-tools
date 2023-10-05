@@ -1,0 +1,163 @@
+[
+  {
+    "id" : "uds-plus-data-receiver-server",
+    "type" : "CapabilityStatement",
+    "url" : "http://hl7.org/fhir/us/uds-plus/CapabilityStatement/uds-plus-data-receiver-server",
+    "version" : "0.2.0",
+    "name" : "UdsPlusDataReceiverServer"
+  },
+  {
+    "id" : "uds-plus-data-source",
+    "type" : "CapabilityStatement",
+    "url" : "http://hl7.org/fhir/us/uds-plus/CapabilityStatement/uds-plus-data-source",
+    "version" : "0.2.0",
+    "name" : "UdsPlusDataSource"
+  },
+  {
+    "id" : "uds-plus-data-submitter-client",
+    "type" : "CapabilityStatement",
+    "url" : "http://hl7.org/fhir/us/uds-plus/CapabilityStatement/uds-plus-data-submitter-client",
+    "version" : "0.2.0",
+    "name" : "UdsPlusDataSubmitter"
+  },
+  {
+    "id" : "uds-plus-trust-service-provider",
+    "type" : "CapabilityStatement",
+    "url" : "http://hl7.org/fhir/us/uds-plus/CapabilityStatement/uds-plus-trust-service-provider",
+    "version" : "0.2.0",
+    "name" : "UdsPlusTrustServiceProvider"
+  },
+  {
+    "id" : "udsplus-agriculture-worker-status-codes",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.org/fhir/us/uds-plus/CodeSystem/udsplus-agriculture-worker-status-codes",
+    "version" : "0.2.0",
+    "name" : "UDSPlusAgricultureWorkerStatusCodes"
+  },
+  {
+    "id" : "udsplus-housing-status-codes",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.org/fhir/us/uds-plus/CodeSystem/udsplus-housing-status-codes",
+    "version" : "0.2.0",
+    "name" : "UDSPlusHousingStatusCodes"
+  },
+  {
+    "id" : "udsplus-insurance-codes",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.org/fhir/us/uds-plus/CodeSystem/udsplus-insurance-codes",
+    "version" : "0.2.0",
+    "name" : "UDSPlusInsuranceCodes"
+  },
+  {
+    "id" : "udsplus",
+    "type" : "ImplementationGuide",
+    "url" : "http://hl7.org/fhir/us/uds-plus/ImplementationGuide/udsplus",
+    "version" : "0.2.0",
+    "name" : "UdsPlusFhirIg"
+  },
+  {
+    "id" : "import",
+    "type" : "OperationDefinition",
+    "url" : "http://hl7.org/fhir/us/uds-plus/OperationDefinition/import",
+    "version" : "0.2.0",
+    "name" : "UdsPlusImport"
+  },
+  {
+    "id" : "udsplus-de-identify",
+    "type" : "OperationDefinition",
+    "url" : "http://hl7.org/fhir/us/uds-plus/OperationDefinition/udsplus-de-identify",
+    "version" : "0.2.0",
+    "name" : "UdsPlusDeIdentify"
+  },
+  {
+    "id" : "de-identified-uds-plus-patient",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/uds-plus/StructureDefinition/de-identified-uds-plus-patient",
+    "version" : "0.2.0",
+    "name" : "DeIdentifiedUDSPlusPatient"
+  },
+  {
+    "id" : "uds-plus-age-extension",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/uds-plus/StructureDefinition/uds-plus-age-extension",
+    "version" : "0.2.0",
+    "name" : "UDSPlusAgeExtension"
+  },
+  {
+    "id" : "uds-plus-agriculture-worker-status-extension",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/uds-plus/StructureDefinition/uds-plus-agriculture-worker-status-extension",
+    "version" : "0.2.0",
+    "name" : "UDSPlusAgricultureWorkerStatusExtension"
+  },
+  {
+    "id" : "uds-plus-coverage",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/uds-plus/StructureDefinition/uds-plus-coverage",
+    "version" : "0.2.0",
+    "name" : "UDSPlusCoverage"
+  },
+  {
+    "id" : "uds-plus-deidentify-data",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/uds-plus/StructureDefinition/uds-plus-deidentify-data",
+    "version" : "0.2.0",
+    "name" : "UDSPlusDeIdentifyData"
+  },
+  {
+    "id" : "uds-plus-diagnosis",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/uds-plus/StructureDefinition/uds-plus-diagnosis",
+    "version" : "0.2.0",
+    "name" : "UDSPlusDiagnosis"
+  },
+  {
+    "id" : "uds-plus-encounter",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/uds-plus/StructureDefinition/uds-plus-encounter",
+    "version" : "0.2.0",
+    "name" : "UDSPlusEncounter"
+  },
+  {
+    "id" : "uds-plus-housing-status-extension",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/uds-plus/StructureDefinition/uds-plus-housing-status-extension",
+    "version" : "0.2.0",
+    "name" : "UDSPlusHousingStatusExtension"
+  },
+  {
+    "id" : "uds-plus-import-manifest",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/uds-plus/StructureDefinition/uds-plus-import-manifest",
+    "version" : "0.2.0",
+    "name" : "UDSPlusImportManifest"
+  },
+  {
+    "id" : "uds-plus-income-observation",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/uds-plus/StructureDefinition/uds-plus-income-observation",
+    "version" : "0.2.0",
+    "name" : "UDSPlusIncome"
+  },
+  {
+    "id" : "uds-plus-procedure",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/uds-plus/StructureDefinition/uds-plus-procedure",
+    "version" : "0.2.0",
+    "name" : "UDSPlusProcedure"
+  },
+  {
+    "id" : "uds-plus-sexual-orientation-observation",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/uds-plus/StructureDefinition/uds-plus-sexual-orientation-observation",
+    "version" : "0.2.0",
+    "name" : "UDSPlusSexualOrientation"
+  },
+  {
+    "id" : "udsplus-agriculture-worker-status",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/uds-plus/StructureDefinition/udsplus-agriculture-worker-status",
+    "version" : "0.2.0",
+    "name" : "UDSPlusAgricultureWorkerStatus"
+  }
+]

@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>UDSPLUS\FHIR API Reporting Specification - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+  <a id="hrsa-logo" no-external="true" href="https://hrsa.gov">
+    <img height="71" alt="Visit the website" src="assets/images/hrsa-logo.png"/>
+  </a>
+</div>
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="30" alt="Visit the FHIR website" src="assets/images/fhir-logo.png"/> </a>
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Uniform Data System (UDS) Patient Level Submission (PLS) - UDS+ IG</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0 - STU 2.0.0
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">UDS Background<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">   
+      <li>
+        <a href="background.html">Implementation Guide Overview</a>
+      </li>
+      <li>
+        <a href="usecases.html">Use Cases and Workflows</a>
+      </li>
+      <li>
+        <a href="dataelements.html">UDS+ Data Elements and FHIR Mappings</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="reportingguidance.html">Reporting Guidance</a>
+      </li>
+      <li>
+        <a href="spec.html">FHIR API Based Reporting</a>
+      </li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li><a href="changes.html">Change History</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/></a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="implementation.html">Implementation Notes</a>
+      </li>
+    </ul>
+  </li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>FHIR API Reporting Specification</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Uniform Data System (UDS) Patient Level Submission (PLS) - UDS+ IG - Local Development build (v0.2.0). See the <a href="http://hl7.org/fhir/us/uds-plus/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>FHIR API Reporting Specification</h2>
+  
+
+
+
+
+
+  <table class="colstu">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Trial-use</a>
+        
+      </td>
+  
+  
+      <td>
+        <a href="http://hl7.org/fhir/versions.html#maturity">Maturity Level</a>: 3
+      </td>
+  
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<p>This section defines the specific requirements for systems wishing to conform to actors specified in this UDS+ IG and use HL7 FHIR for reporting.</p>
+
+<h3 id="context">Context</h3>
+
+<h4 id="pre-reading">Pre-reading</h4>
+<p>Before reading this formal specification, implementers should first be familiar with two other key portions of the specification:</p>
+
+<ul>
+  <li>
+    <p>The <a href="usecases.html">Use Cases</a> page provides the business context and general process flow enabled by the formal specification.</p>
+  </li>
+  <li>
+    <p>The <a href="background.html">Background</a> page provides information about the underlying specifications and indicates what portions of each should be reviewed in order to have the necessary foundation to understand the constraints and usage guidance described in this detailed specification.</p>
+  </li>
+</ul>
+
+<h4 id="conventions">Conventions</h4>
+<p>This implementation guide uses specific terminology to flag statements that have relevance for the evaluation of conformance with the guide:</p>
+
+<ul>
+  <li>
+    <p><strong>SHALL</strong> indicates requirements that must be met to be conformant with the specification.</p>
+  </li>
+  <li>
+    <p><strong>SHOULD</strong> indicates behaviors that are strongly recommended (and which may result in interoperability issues or sub-optimal behavior if not adhered to), but which do not, for this version of the specification, affect the determination of specification conformance.</p>
+  </li>
+  <li>
+    <p><strong>MAY</strong> describes optional behaviors that are free to consider but where the is no recommendation for or against adoption.</p>
+  </li>
+</ul>
+
+<h4 id="claiming-conformance">Claiming Conformance</h4>
+
+<p>Actors and Systems asserting conformance to this implementation guide have to implement the requirements outlined in the corresponding capability statements. The following definition of MUST SUPPORT is to be used in the implementation of the requirements.</p>
+
+<h5 id="must-support-definition">MUST SUPPORT Definition</h5>
+
+<ul>
+  <li>Systems SHALL be capable of populating data elements as specified by the profiles and data elements are returned using the specified APIs in the capability statement.</li>
+  <li>Systems SHALL be capable of processing resource instances containing the MUST SUPPORT data elements without generating an error or causing the application to fail.</li>
+  <li>Systems SHOULD be capable of displaying the MUST SUPPORT data elements for human use or storing it for other purposes.</li>
+  <li>In situations where information on a particular data element is not present and the reason for absence is unknown, Systems SHALL NOT include the data elements in the resource instance returned from executing the API requests.</li>
+  <li>When accessing UDS+ data, Systems SHALL interpret missing data elements within resource instances returned from API requests as data not present.</li>
+</ul>
+
+<h4 id="profiles">Profiles</h4>
+<p>This specification makes significant use of <a href="http://hl7.org/fhir/R4/profiling.html">FHIR profiles</a>, search parameter definitions, and terminology artifacts to describe the content to be shared as part of UDS+ workflows. The implementation guide is based on <a href="http://hl7.org/fhir/R4/">FHIR R4</a> and profiles are listed for each interaction.</p>
+
+<p>The full set of profiles defined in this implementation guide can be found by following the links on the <a href="artifacts.html">UDS+ FHIR Artifacts</a> page.</p>
+
+<h4 id="smart-on-fhir-backend-services-authorization">SMART on FHIR Backend Services Authorization</h4>
+<p>This section outlines how the SMART on FHIR Backend Services Authorization will be used by the UDS+ implementation guide.</p>
+
+<ul>
+  <li>
+    <p>When conforming to the SMART Backend Services Authorization, System Actors SHALL include token_endpoint, scopes_supported, token_endpoint_auth_methods_supported and token_endpoint_auth_signing_alg_values_supported as defined in the <a href="http://hl7.org/fhir/smart-app-launch/backend-services.html">SMART on FHIR IG Backend Services</a> specification.</p>
+  </li>
+  <li>
+    <p>When System Actors act as clients, they SHOULD share their JSON Web Key Set (JWKS) with the server System Actors using Uniform Resource Locators (URLs) as defined in the <a href="http://hl7.org/fhir/smart-app-launch/backend-services.html">SMART on FHIR IG Backend Services</a> specification.</p>
+  </li>
+  <li>
+    <p>Client System Actors SHALL obtain the access token as defined in the <a href="http://hl7.org/fhir/smart-app-launch/backend-services.html">SMART on FHIR Backend Services</a> specification.</p>
+  </li>
+  <li>
+    <p>Data Sources SHALL support the system/*.read scope so that the necessary data can be extracted for UDS+ submissions.</p>
+  </li>
+</ul>
+
+<h4 id="system-actors-requirements-and-capability-statements">System Actors, Requirements and Capability Statements</h4>
+
+<h5 id="data-source-requirements">Data Source Requirements</h5>
+
+<p>This section identifies the different requirements for Data Source (e.g., EHRs) systems supporting the Health Centers.</p>
+
+<ul>
+  <li>
+    <p>The Data Source SHALL support the [FHIR Base URL]/Group/[id]/$export as per the Bulk Data Access IG.</p>
+  </li>
+  <li>
+    <p>The Data Source SHALL support the resources and profiles identified in the <a href="">Data Source Capability Statement</a></p>
+  </li>
+  <li>
+    <p>The Data Source SHALL support the [FHIR Base URL]/Group/[id]/$export using the _since parameter as per the Bulk Data Access IG.</p>
+  </li>
+  <li>
+    <p>The Data Source SHALL support the [FHIR Base URL]/Group/[id]/$export using the _type parameter as per the Bulk Data Access IG.</p>
+  </li>
+  <li>
+    <p>The Data Source SHALL support the SMART on FHIR Backend Services Authorization as outlined in the previous sections.</p>
+  </li>
+</ul>
+
+<h5 id="data-submitter-requirements">Data Submitter Requirements</h5>
+
+<p>This section identifies the different requirements for Data Submitter system supporting the Health Centers.</p>
+
+<ul>
+  <li>
+    <p>The Data Submitter SHALL support the scheduling of timers to kick off health center reporting based on HRSA guidance.</p>
+  </li>
+  <li>
+    <p>The Data Submitter SHALL implement the client requirements per the Bulk Data Access IG to start the export of the data from the Data Source.</p>
+  </li>
+  <li>
+    <p>The Data Submitter SHALL implement the monitoring of the export request per the Bulk Data Access IG.</p>
+  </li>
+  <li>
+    <p>Once the export is completed, the Data Submitter SHALL download the exported data for de-identification.</p>
+  </li>
+  <li>
+    <p>The Data Submitter SHALL retain the patient linkages between the identifiable data and de-identified data.</p>
+  </li>
+  <li>
+    <p>The Data Submitter SHALL de-identify the exported data using the Trust Service Provider services and then create the links for HRSA to download the data.</p>
+  </li>
+  <li>
+    <p>The Data Submitter SHALL validate the data for conformance to the IG.</p>
+  </li>
+  <li>
+    <p>The Data Submitter SHALL implement the following security protocols to protect the links being shared with HRSA.</p>
+  </li>
+  <li>
+    <p>The Data Submitter SHALL notify the HRSA Data Receiver when the data is ready using the <a href="OperationDefinition-import.html">$import</a> operation.</p>
+  </li>
+</ul>
+
+<h5 id="trust-service-provider-requirements">Trust Service Provider Requirements</h5>
+<p>This section identifies the different requirements for UDS+ Trust Service Provider that can be used for de-identification.</p>
+
+<ul>
+  <li>
+    <p>The Trust Service Provider SHALL support the de-identify operation for each type of resource per the Capability Statement.</p>
+  </li>
+  <li>
+    <p>The Trust Service Provider SHALL create an identifier that is retained internally to link between identifiable and de-identifiable data.</p>
+  </li>
+  <li>
+    <p>The Trust Service Provider SHALL remove all identifiable data using the profiles specified in this IG and create NDJSON data based on the IG profiles.</p>
+  </li>
+</ul>
+
+<h5 id="data-receiver-requirements">Data Receiver Requirements</h5>
+<p>This section identifies the different requirements for Data Receiver systems hosted by HRSA.</p>
+
+<ul>
+  <li>
+    <p>The Data Receiver SHALL implement the <a href="OperationDefinition-import.html">$import</a> operation to receive notification of completed export for each health center.</p>
+  </li>
+  <li>
+    <p>The Data Receiver SHALL download the NDJSON formatted, de-identified data from the health center using the links provided by the Data Submitter following the protocol specified in the manifest file.</p>
+  </li>
+  <li>
+    <p>The Data Receiver SHALL validate the received NDJSON data according the IG profiles.</p>
+  </li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.org/Special/committees/[something]">HRSA UDS PLS Project</a>.  Package fhir.us.udsplus#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 6, 2022 16:43-0500">2022-12-06</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
