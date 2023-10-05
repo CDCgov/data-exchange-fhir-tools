@@ -1,0 +1,68 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "udsplus-insurance-codes",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://hl7.org/fhir/us/uds-plus/CodeSystem/udsplus-insurance-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">medicaid-title-19<a name=\"udsplus-insurance-codes-medicaid-title-19\"> </a></td><td>Medicaid Title X1X</td><td>Patients with Medicaid (Title X1X) insurance.</td></tr><tr><td style=\"white-space:nowrap\">chip-medicaid<a name=\"udsplus-insurance-codes-chip-medicaid\"> </a></td><td>CHIP Medicaid</td><td>Patients with CHIP Medicaid insurance.</td></tr><tr><td style=\"white-space:nowrap\">dually-eligible<a name=\"udsplus-insurance-codes-dually-eligible\"> </a></td><td>Dually Eligible</td><td>Patients with both Medicare and Medicaid.</td></tr><tr><td style=\"white-space:nowrap\">other-non-chip-public-insurance<a name=\"udsplus-insurance-codes-other-non-chip-public-insurance\"> </a></td><td>Other Non CHIP Public Insurance</td><td>Patients who have other public insurance which is non CHIP.</td></tr><tr><td style=\"white-space:nowrap\">other-public-insurance-chip<a name=\"udsplus-insurance-codes-other-public-insurance-chip\"> </a></td><td>Other Public Insurance CHIP</td><td>Patients who have other public insurance which is CHIP </td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/us/uds-plus/ImplementationGuide/udsplus"
+      }]
+    }
+  }],
+  "url" : "http://hl7.org/fhir/us/uds-plus/CodeSystem/udsplus-insurance-codes",
+  "version" : "0.2.0",
+  "name" : "UDSPlusInsuranceCodes",
+  "title" : "UDS Plus Insurance Codes",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2022-09-06",
+  "publisher" : "HRSA UDS PLS Project",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.org/Special/committees/[something]"
+    }]
+  }],
+  "description" : "The UDS Plus CodeSystem is a 'starter set' of codes supported for identifying insurance types used by patients in UDS+ program.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "caseSensitive" : true,
+  "valueSet" : "http://hl7.org/fhir/us/uds-plus/ValueSet/udsplus-insurance",
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "medicaid-title-19",
+    "display" : "Medicaid Title X1X",
+    "definition" : "Patients with Medicaid (Title X1X) insurance."
+  },
+  {
+    "code" : "chip-medicaid",
+    "display" : "CHIP Medicaid",
+    "definition" : "Patients with CHIP Medicaid insurance."
+  },
+  {
+    "code" : "dually-eligible",
+    "display" : "Dually Eligible",
+    "definition" : "Patients with both Medicare and Medicaid."
+  },
+  {
+    "code" : "other-non-chip-public-insurance",
+    "display" : "Other Non CHIP Public Insurance",
+    "definition" : "Patients who have other public insurance which is non CHIP."
+  },
+  {
+    "code" : "other-public-insurance-chip",
+    "display" : "Other Public Insurance CHIP",
+    "definition" : "Patients who have other public insurance which is CHIP "
+  }]
+}
