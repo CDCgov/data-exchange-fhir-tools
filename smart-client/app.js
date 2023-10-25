@@ -163,8 +163,8 @@ app.get('/bearer/shared-secret', async (req, res) => {
 
 
 // get bearer token from fhir server
-// asymmetric client authentication
-app.get('/bearer/public-key', async (req, res) => {
+// asymmetric client authentication by using jwks published public key
+app.get('/bearer/public-key/jwks', async (req, res) => {
 
   const wellKnownInfo = await wellKnown.info()
   if (wellKnownInfo instanceof Error) {
@@ -207,7 +207,14 @@ app.get('/bearer/public-key', async (req, res) => {
     console.error(err)
     res.status(500).send({errorMessage: err.message})
   } // .try catch
-}) // ./bearer/public-key
+}) // ./bearer/public-key/jwks
+
+// get bearer token from fhir server
+// asymmetric client authentication by using pre-registered cert
+app.get('/bearer/public-key/cert', async (req, res) => {
+
+ res.send("Not Implemented")
+}) // ./bearer/public-key/cert
 
 
 // get fhir searches

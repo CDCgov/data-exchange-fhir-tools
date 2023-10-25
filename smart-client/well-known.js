@@ -10,6 +10,8 @@ async function info() {
 
     const fhirWellKnownUrl = `${fhirUrl}/.well-known/smart-configuration`
 
+    console.info(`calling url: ${fhirWellKnownUrl}`)
+
     try {
         response = await axios.get(fhirWellKnownUrl)
 
