@@ -1,5 +1,6 @@
 .vscode
 
+complete_certificate.*
 store.json 
 keys.json
 keys.*
