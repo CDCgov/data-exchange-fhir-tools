@@ -187,7 +187,9 @@ app.get('/bearer/public-key/jwks', async (req, res) => {
   params.append('client_assertion_type', 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer')
   params.append('client_assertion', jwt1)
   const headers = {
-      'Content-Type': 'application/x-www-form-urlencoded'
+      // 'Content-Type': 'application/x-www-form-urlencoded'
+      'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+
   }
 
   try {
@@ -199,6 +201,8 @@ app.get('/bearer/public-key/jwks', async (req, res) => {
 
     const accessToken = authResp.data 
     store.setValues({accessToken: accessToken})
+
+    console.log('received access token:', accessToken)
     
     res.send(accessToken)
 
