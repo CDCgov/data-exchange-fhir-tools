@@ -69,9 +69,11 @@ async function createJwt(tokenUrl) {
 } // .create
 
 
-// to generate a new key, currently not used in the app to create new keys
+// to generate a new key, 
+// currently not used in the app to create new keys
+// can be run locally see app.js line 12
 function create(fileName) {
-    const alg = 'RS256'
+    const alg = 'RS384'
     // alg : 'RS384', 'RS256'
 
     if (fs.existsSync(fileName)) {
@@ -90,6 +92,6 @@ function create(fileName) {
 } // .create
 
 
-module.exports = { keys, createJwt }
+module.exports = { keys, createJwt, create }
 
 

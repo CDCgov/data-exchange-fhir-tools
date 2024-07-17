@@ -6,6 +6,7 @@ keys.json
 keys.*
 .env.*
 !.env.example
+new_key
 
 
 

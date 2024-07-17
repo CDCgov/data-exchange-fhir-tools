@@ -10,6 +10,9 @@ const c34 = require('./c34')
 
 const config = require('./config')
 
+// run locally to create new keys in the file new_key
+// jwks.create("new_key")
+
 const app = express()
 
 // Middleware to parse JSON requests
@@ -144,6 +147,8 @@ app.get('/bearer/shared-secret', async (req, res) => {
   const headers = {
     'Content-Type': 'application/x-www-form-urlencoded'
   }
+
+  console.info(`with client id: ${clientId} calling ${fhirServerAuthUrl}`)
 
   try {
     const authResp = await axios.post(fhirServerAuthUrl, bodyParams, {
