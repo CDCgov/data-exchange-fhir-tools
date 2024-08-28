@@ -20,12 +20,20 @@ fn main() {
 
             count_all += 1;
 
-            let entry_name = entry.entry_name().to_string_lossy();
+            let entry_name = entry.file_name().to_string_lossy();
+
+            let source_path = entry.path();
+            
+            // TODO: add xml folder to skipping 
+            
+            if source_path.components().any(|c| c.as_os_str() == "openapi") {
+                println!("Skipping: {}", source_path.display());
+                continue;
+            }// .if
+                
 
             if needed_files_arr.iter().any(|e| entry_name.starts_with(e)) {
 
-                let source_path = entry.path();
-                
                 let relative_path = source_path.strip_prefix(source_dir).unwrap();
                 let target_path = Path::new(target_dir).join(relative_path);
 
