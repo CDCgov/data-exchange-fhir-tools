@@ -20,9 +20,9 @@ fn main() {
 
             count_all += 1;
 
-            let file_name = entry.file_name().to_string_lossy();
+            let entry_name = entry.entry_name().to_string_lossy();
 
-            if needed_files_arr.iter().any(|e| file_name.starts_with(e)) {
+            if needed_files_arr.iter().any(|e| entry_name.starts_with(e)) {
 
                 let source_path = entry.path();
                 
@@ -39,12 +39,12 @@ fn main() {
 
 
                 count_filtered += 1;
-                println!("File name (Needed): {}", file_name);
+                println!("File name (Needed): {}", entry_name);
                 println!("Copied from path: {}", source_path.display());
 
             } else {
 
-                println!("File name: {}", file_name); 
+                println!("File name: {}", entry_name); 
             } // .else 
 
     } // .for
