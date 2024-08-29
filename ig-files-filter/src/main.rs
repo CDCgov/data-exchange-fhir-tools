@@ -9,7 +9,7 @@ fn main() {
     let target_dir = "hcs_ig_files_filtered";
 
     let needed_files_arr = vec!["CapabilityStatement", "StructureDefinition", "ValueSet"];
-
+    let skip_folders = vec!["openapi", "example", "xml"];
 
     let mut count_all = 0;
     let mut count_filtered = 0;
@@ -24,13 +24,12 @@ fn main() {
 
             let source_path = entry.path();
             
-            // TODO: add xml folder to skipping 
-            
-            if source_path.components().any(|c| c.as_os_str() == "openapi") {
+            if source_path.components().any(|c| {
+                c.as_os_str().to_str().map_or(false, |s| skip_folders.contains(&s))
+            }) {
                 println!("Skipping: {}", source_path.display());
                 continue;
-            }// .if
-                
+            } // .if                 
 
             if needed_files_arr.iter().any(|e| entry_name.starts_with(e)) {
 

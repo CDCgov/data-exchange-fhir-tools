@@ -7,6 +7,11 @@ hcs_ig_files_filtered
 hcs_ig_files_all
 
 ###############
+# VS Code
+###############
+.vscode
+
+###############
 # Rust 
 # Reference: https://github.com/github/gitignore/blob/main/Rust.gitignore
 ###############
