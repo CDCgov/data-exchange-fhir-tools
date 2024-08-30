@@ -12,7 +12,7 @@ $ cargo run src/main.rs
 
 Filtering rules:
 - File name starts with: "CapabilityStatement", "StructureDefinition", "ValueSet".
-- Files are not in the openapi directory.
+- Files are not in the "example", "openapi", or "xml" directories.
 
 Note: Copied files in __hcs_ig_files_filtered__ will preserve path from the source folder.
 
