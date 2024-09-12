@@ -8,7 +8,7 @@ fn main() {
     let source_dir = "hcs_ig_files_all";
     let target_dir = "hcs_ig_files_filtered";
 
-    let needed_files_arr = vec!["CapabilityStatement", "StructureDefinition", "ValueSet"];
+    let needed_files_arr = vec!["CapabilityStatement", "StructureDefinition", "ValueSet", "CodeSystem"];
     let skip_folders = vec!["openapi", "example", "xml"];
 
     let mut count_all = 0;
