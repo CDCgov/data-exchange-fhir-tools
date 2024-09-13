@@ -11,7 +11,7 @@ $ cargo run src/main.rs
 - Local directory: __hcs_ig_files_filtered__, The copies of the filtered folders and files based on the filtering rules.
 
 Filtering rules:
-- File name starts with: "CapabilityStatement", "StructureDefinition", "ValueSet".
+- File name starts with: "CapabilityStatement", "StructureDefinition", "ValueSet", "CodeSystem".
 - Files are not in the "example", "openapi", or "xml" directories.
 
 Note: Copied files in __hcs_ig_files_filtered__ will preserve path from the source folder.
